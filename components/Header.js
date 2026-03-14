@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFonts, BebasNeue_400Regular } from '@expo-google-fonts/bebas-neue';
@@ -13,7 +12,7 @@ export default function Header({ title = "Marine Torpilleur" }) {
   if (!fontsLoaded) return null;
 
   const handleTitlePress = () => {
-    navigation.navigate('Patrick');  // ← Изменено на Patrick
+    navigation.navigate('Patrick');
   };
 
   const handleMenuPress = () => {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';  // ← +TouchableOpacity
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import Header from '../components/Header';
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,7 +6,7 @@ export default function Marine_Torpilleur() {
   const navigation = useNavigation();
 
   const handleWatchPress = () => {
-    navigation.navigate('Caliber');  // ← На Caliber по клику на watch1
+    navigation.navigate('Caliber');
   };
 
   return (
@@ -15,8 +14,6 @@ export default function Marine_Torpilleur() {
       <Header title="Marine Torpilleur" />
       <View style={styles.mainContent}>
         <Text style={styles.MarineText}>Marine Torpilleur <br/> <Text style={styles.MarineText1}>42 mm</Text></Text>
-        
-        {/* Обернули Image в TouchableOpacity */}
         <TouchableOpacity onPress={handleWatchPress}>
           <Image source={require('../assets/watch1.png')} style={styles.watch1}/>
         </TouchableOpacity>
@@ -39,7 +36,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginTop: 60, // Высота header
+    marginTop: 60,
   },
   mainContent: {
     flex: 1,
