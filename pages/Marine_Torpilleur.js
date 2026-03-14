@@ -13,16 +13,19 @@ export default function Marine_Torpilleur() {
     <View style={styles.container}>
       <Header title="Marine Torpilleur" />
       <View style={styles.mainContent}>
-        <Text style={styles.MarineText}>Marine Torpilleur <br/> <Text style={styles.MarineText1}>42 mm</Text></Text>
+        <View>
+          <Text style={styles.MarineText}>Marine Torpilleur</Text>
+          <Text style={styles.MarineText1}>42 mm</Text>
+        </View>
         <TouchableOpacity onPress={handleWatchPress}>
           <Image source={require('../assets/watch1.png')} style={styles.watch1}/>
         </TouchableOpacity>
         
         <View style={styles.cart}>
-          <Text style={styles.cartText}>
+          <View style={styles.cartText}>
             <Image source={require('../assets/Union.png')} style={styles.cart_logo}/> 
             CART <Text style={styles.cartText1}>----</Text> 2
-          </Text>
+          </View>
         </View>
       </View>
     </View>
